@@ -9,8 +9,15 @@ on:
 #하나의 workflow는 반드시 1개이상의 job으로구성
 jobs:
   My-Deploy-Job:
+    #ubuntu 환경 / 가장 최신버전
     runs-on: ubuntu-latest
-
+    #step: 작업수행하는 가장작은 단위
+    #하나의 job은 여러 steps로 구성
     steps:
       - name: Hello World 찍기
         run: echo "Hello World"
+
+      - name: 여러명령어 문장 작성하기
+        run: |
+          echo "Good"
+          echo "morning"
